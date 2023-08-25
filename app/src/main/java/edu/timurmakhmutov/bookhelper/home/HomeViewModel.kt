@@ -6,6 +6,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.asLiveData
 import edu.timurmakhmutov.bookhelper.model.Book
 import edu.timurmakhmutov.bookhelper.model.MainDB
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
 
@@ -21,8 +22,8 @@ class HomeViewModel(application: Application): AndroidViewModel(application) {
 
 
 
-    private fun showAllBooks(){
-        GlobalScope.launch {
+    fun showAllBooks(){
+        GlobalScope.launch(Dispatchers.Main) {
             db.getDao().getAllBooks().asLiveData().observeForever {
                 booksLiveData.value = it
             }
