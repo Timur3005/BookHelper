@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/homeFragment"
-        android:name="edu.timurmakhmutov.bookhelper.HomeFragment"
+        android:name="edu.timurmakhmutov.bookhelper.home.HomeFragment"
         android:label="fragment_home"
         tools:layout="@layout/fragment_home" >
         <action
@@ -19,12 +19,12 @@
     </fragment>
     <fragment
         android:id="@+id/addBookFragment"
-        android:name="edu.timurmakhmutov.bookhelper.AddBookFragment"
+        android:name="edu.timurmakhmutov.bookhelper.add_book.AddBookFragment"
         android:label="fragment_add_book"
         tools:layout="@layout/fragment_add_book" />
     <fragment
         android:id="@+id/profileFragment"
-        android:name="edu.timurmakhmutov.bookhelper.ProfileFragment"
+        android:name="edu.timurmakhmutov.bookhelper.profile.ProfileFragment"
         android:label="fragment_profile"
         tools:layout="@layout/fragment_profile" />
 </navigation>

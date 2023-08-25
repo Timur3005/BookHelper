@@ -1,10 +1,11 @@
-package edu.timurmakhmutov.bookhelper
+package edu.timurmakhmutov.bookhelper.home
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import edu.timurmakhmutov.bookhelper.R
 
 class HomeFragment : Fragment() {
 
