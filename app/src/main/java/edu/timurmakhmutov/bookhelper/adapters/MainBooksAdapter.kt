@@ -10,10 +10,21 @@ import edu.timurmakhmutov.bookhelper.R
 import edu.timurmakhmutov.bookhelper.databinding.BookItemBinding
 import edu.timurmakhmutov.bookhelper.model.Book
 
-class MainBooksAdapter(diffCallback: DiffUtil.ItemCallback<Book>, private val listener: Listener) :
-    ListAdapter<Book, MainBooksAdapter.MainViewHolder>(diffCallback) {
+class MainBooksAdapter(private val listener: Listener) :
+    ListAdapter<Book, MainBooksAdapter.MainViewHolder>(Comparator()) {
 
-    inner class MainViewHolder(private val view: View): RecyclerView.ViewHolder(view){
+    class Comparator:DiffUtil.ItemCallback<Book>(){
+        override fun areItemsTheSame(oldItem: Book, newItem: Book): Boolean {
+            return oldItem==newItem
+        }
+
+        override fun areContentsTheSame(oldItem: Book, newItem: Book): Boolean {
+            return oldItem==newItem
+        }
+
+    }
+
+    class MainViewHolder(private val view: View): RecyclerView.ViewHolder(view){
         private val binding = BookItemBinding.bind(view)
         fun bind(book: Book, listener: Listener){
             with(binding){

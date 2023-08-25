@@ -11,9 +11,15 @@ import kotlinx.coroutines.launch
 
 class HomeViewModel(application: Application): AndroidViewModel(application) {
 
-    private val booksLiveData = MutableLiveData<List<Book>>()
+    init {
+        showAllBooks()
+    }
+
+    val booksLiveData = MutableLiveData<List<Book>>()
 
     private val db = MainDB.getDB(application)
+
+
 
     private fun showAllBooks(){
         GlobalScope.launch {
@@ -23,7 +29,7 @@ class HomeViewModel(application: Application): AndroidViewModel(application) {
         }
     }
 
-    private fun deleteBook(book: Book){
+    fun deleteBook(book: Book){
         GlobalScope.launch {
             db.getDao().deleteBook(book)
         }
