@@ -7,8 +7,21 @@
     android:orientation="vertical">
 
     <androidx.recyclerview.widget.RecyclerView
+        android:layout_weight="40"
         android:id="@+id/users_books"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"/>
+
+    <Button
+        android:layout_weight="1"
+        android:layout_margin="10dp"
+        android:id="@+id/button_add_book"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:textSize="18sp"
+        android:textColor="@color/black"
+        android:text="@string/add_book"/>
 
 </LinearLayout>

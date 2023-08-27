@@ -5,4 +5,8 @@
     <string name="profile">Profile</string>
     <string name="add_book">Add book</string>
     <string name="home">Home</string>
+    <string name="book_s_name">Book\'s name</string>
+    <string name="current_page">Current page</string>
+    <string name="max_page">max page</string>
+    <string name="review">review</string>
 </resources>

@@ -22,7 +22,7 @@ class HomeViewModel(application: Application): AndroidViewModel(application) {
 
 
 
-    fun showAllBooks(){
+    private fun showAllBooks(){
         GlobalScope.launch(Dispatchers.Main) {
             db.getDao().getAllBooks().asLiveData().observeForever {
                 booksLiveData.value = it

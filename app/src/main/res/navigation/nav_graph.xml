@@ -21,7 +21,11 @@
         android:id="@+id/addBookFragment"
         android:name="edu.timurmakhmutov.bookhelper.add_book.AddBookFragment"
         android:label="fragment_add_book"
-        tools:layout="@layout/fragment_add_book" />
+        tools:layout="@layout/fragment_add_book" >
+        <action
+            android:id="@+id/action_addBookFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
     <fragment
         android:id="@+id/profileFragment"
         android:name="edu.timurmakhmutov.bookhelper.profile.ProfileFragment"

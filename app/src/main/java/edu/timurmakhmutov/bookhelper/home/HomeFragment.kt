@@ -1,13 +1,12 @@
 package edu.timurmakhmutov.bookhelper.home
 
-import android.app.Application
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.fragment.app.activityViewModels
+import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import edu.timurmakhmutov.bookhelper.R
 import edu.timurmakhmutov.bookhelper.adapters.MainBooksAdapter
@@ -37,6 +36,10 @@ class HomeFragment : Fragment(), MainBooksAdapter.Listener {
         super.onViewCreated(view, savedInstanceState)
         initRecycler()
         updateData()
+
+        binding.buttonAddBook.setOnClickListener {
+            findNavController().navigate(R.id.action_homeFragment_to_addBookFragment)
+        }
     }
 
     private fun initRecycler(){

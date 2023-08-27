@@ -41,7 +41,7 @@ class MainBooksAdapter(private val listener: Listener) :
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MainViewHolder {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.book_item, parent)
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.book_item, parent, false)
         return MainViewHolder(view)
     }
 
